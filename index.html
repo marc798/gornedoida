@@ -1,74 +1,107 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>calculatore</title>
+		<title>Fan wis calc</title>
+		
 		<script>
 			function addTwoNumbers()
-			{var num1=document.getElementById('fnumber').value*1.0			
-			var num2=document.getElementById('snumber').value*1.0;
-			document.getElementById('result').innerHTML=num1+num2;
-			}
+				{
+					var num1=document.getElementById('fnumber').value*1.0;
+					var num2=document.getElementById('snumber').value*1.0;
+					document.getElementById('result').innerHTML=num1+num2;
+				}
+				
+			
+			function subTwoNumbers()
+				{
+					var num1=document.getElementById('fnumber').value*1.0;
+					var num2=document.getElementById('snumber').value*1.0;
+					document.getElementById('result').innerHTML=num1-num2;
+				}
 			function average()
-			{var num1=document.getElementById('fnumber').value*1.0			
-			var num2=document.getElementById('snumber').value*1.0;
-			document.getElementById('result').innerHTML=(num1+num2)/2;
-			}
-			function sub()
-			{var num1=document.getElementById('fnumber').value*1.0			
-			var num2=document.getElementById('snumber').value*1.0;
-			document.getElementById('result').innerHTML=num1-num2;
-			}
-			function mult()
-			{var num1=document.getElementById('fnumber').value*1.0			
-			var num2=document.getElementById('snumber').value*1.0;
-			document.getElementById('result').innerHTML=num1*num2;
-			}
-			function div()
-			{var num1=document.getElementById('fnumber').value*1.0			
-			var num2=document.getElementById('snumber').value*1.0;
-			document.getElementById('result').innerHTML=num1/num2;
-			}
-			function pot()
-			{var num1=document.getElementById('fnumber').value*1.0			
-			var num2=document.getElementById('snumber').value*1.0;
-			document.getElementById('result').innerHTML=num1**num2;
-			}
+				{
+					var num1=document.getElementById('fnumber').value*1.0;
+					var num2=document.getElementById('snumber').value*1.0;
+					document.getElementById('result').innerHTML=(num1+num2)/2;
+				}
+			function multiply()
+				{
+					var num1=document.getElementById('fnumber').value*1.0;
+					var num2=document.getElementById('snumber').value*1.0;
+					document.getElementById('result').innerHTML=num1*num2;
+				}
+			function exponential()
+				{
+					var num1=document.getElementById('fnumber').value*1.0;
+					var num2=document.getElementById('snumber').value*1.0;
+					document.getElementById('result').innerHTML=num1**num2;
+				}
+			function divide()
+				{
+					var num1=document.getElementById('fnumber').value*1.0;
+					var num2=document.getElementById('snumber').value*1.0;
+					document.getElementById('result').innerHTML=num1/num2;
+				}
+			function logarithm()
+				{
+					var num1=document.getElementById('fnumber').value*1.0;
+					var num2=document.getElementById('snumber').value*1.0;
+					document.getElementById('result').innerHTML=Math.log(num1)/Math.log(num2);
+				}
+				
 		</script>
+		
 	</head>
+	
 	<body>
-		<h1>fan wis calculate</h1><br>
+		
+		<h1>Fan wis calc</h1><br>
+
 		<form>
-		  <label for="fnumber">First number:</label>
-		  <input type="text" id="fnumber" name="fnumber"><br><br>
-		  <label for="snumber">Second Number:</label>
-		  <input type="text" id="snumber" name="snumber"><br><br>
+			  <label for="fnumber">Först Numerino:</label>
+			  <input type="text" id="fnumber" name="fnumber"><br><br>
+			  <label for="snumber">Sekundo Numerino:</label>
+			  <input type="text" id="snumber" name="snumber"><br><br>
+			
 		</form>
-		<button onclick="addTwoNumbers()">
-		sum
-		</button>
-		
-		<button onclick="average()">
-		average
-		</button>
-		
-        <button onclick="sub()">
-		sub
-		</button>
-		
-		<button onclick="mult()">
-		mul
-		</button>
-		
-		<button onclick="div()">
-		div
-		</button>
-		
-		<button onclick="pot()">
-		pot
-		</button>
-		
-		
-		<p id="result">
-		</p>
+				
+		<div>
+			<button onclick="addTwoNumbers()">
+				add
+			</button>
+			
+			<button onclick="subTwoNumbers()">
+				sub
+			</button>
+			
+			
+			<button onclick="average()">
+				aret
+			</button>
+			
+			<button onclick="multiply()">
+				mult
+			</button>
+			
+			<button onclick="divide()">
+				div
+			</button>
+			
+			
+			<button onclick="exponential()">
+				pot
+			</button>
+
+			<button onclick="logarithm()">
+				log
+			</button>
+
+			
+			<p id="result">
+				
+			</p>
+			
+		</div>
 	</body>
+	
 </html>
