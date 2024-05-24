@@ -1,0 +1,67 @@
+
+<html lang="de">
+<head>
+    
+    <title>Ewro zu Schilling Umrechner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #202124;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: #303134;
+            padding: 20px;
+			border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+        }
+        input[type="number"] {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1em;
+            width: calc(100% - 22px);
+			background-color: #575757;
+			color: white;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #b10000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #990101;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+			color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style=color:white>Ewro zu Schilling calculatore</h1>
+        <input type="number" id="euro" placeholder="Ewro" step="0.01" min="0">
+        <button onclick="convertToSchilling()">Umrechnen</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function convertToSchilling() {
+            const euro = document.getElementById('euro').value;
+            if (euro === "") {
+                alert("Betrag in Ewro");
+                return;
+            }
+            const schilling = euro * 13.7603;
+            document.getElementById('result').innerText = `${euro} Euro = ${schilling.toFixed(2)} Schilling`;
+        }
+    </script>
+</body>
+</html>
